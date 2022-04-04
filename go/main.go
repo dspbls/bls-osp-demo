@@ -20,7 +20,7 @@ func main() {
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
     fmt.Println("handling main request with color: ", token)
-    fmt.Fprintf(w, "<h1 style=color:#%s>Hello %s</h1><h2>ID: %s</h2>", token, getEnv("NAME", "golang"), token)
+    fmt.Fprintf(w, "<h1 style=color:#a0e100>Hallo ART-P @ PI Planning</h1><h2>OpenShift %s</h2>", getEnv("NAME", "-"))
 }
 
 func PodServer(w http.ResponseWriter, r *http.Request) {
