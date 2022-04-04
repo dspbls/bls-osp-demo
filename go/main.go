@@ -19,8 +19,8 @@ func main() {
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("handling main request with color: ", token)
-    fmt.Fprintf(w, "<h1 style=color:#a0e100>Hallo ART-P @ PI Planning</h1><h2>OpenShift %s</h2>", getEnv("NAME", "-"))
+    fmt.Println("handling main request")
+    fmt.Fprintf(w, "<h1 style=color:#a0e100>Hallo ART-P @ PI Planning</h1><h2>Ich bin Pod %s</h2>", getEnv("HOSTNAME", "-"))
 }
 
 func PodServer(w http.ResponseWriter, r *http.Request) {
